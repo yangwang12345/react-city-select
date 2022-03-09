@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-city-select/static/css/main.1c947d55.css",
+    "main.js": "/react-city-select/static/js/main.f459e0d4.js",
+    "static/js/637.e0aae10b.chunk.js": "/react-city-select/static/js/637.e0aae10b.chunk.js",
+    "index.html": "/react-city-select/index.html",
+    "main.1c947d55.css.map": "/react-city-select/static/css/main.1c947d55.css.map",
+    "main.f459e0d4.js.map": "/react-city-select/static/js/main.f459e0d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c947d55.css",
+    "static/js/main.f459e0d4.js"
+  ]
+}
