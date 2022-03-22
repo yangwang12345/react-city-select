@@ -60,6 +60,12 @@ export const apis = {
     }, getCity: (id) => {
         return apis.loadData().then(({city}) => {
             const item = city.list[id];
+            if (!item) {
+                return {
+                    city: null,
+                    parent: null
+                };
+            }
             return {
                 city: item, parent: item.parentCode ? city.list[item.parentCode] : null
             };
