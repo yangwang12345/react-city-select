@@ -127,3 +127,4 @@ dist
 .pnp.*
 .idea
 build
+.DS_Store
