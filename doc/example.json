@@ -1,0 +1,50 @@
+{
+  "isFull": false,
+  "list": [
+    {
+      "title": "城市单选",
+      "description": "展示城市单选的情况",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "citySelect",
+          "packageName": "@kne/react-city-select"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        }
+      ]
+    },
+    {
+      "title": "城市多选",
+      "description": "展示城市多选的情况",
+      "code": "./multiple.js",
+      "scope": [
+        {
+          "name": "citySelect",
+          "packageName": "@kne/react-city-select"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        }
+      ]
+    },
+    {
+      "title": "城市名称显示",
+      "description": "展示选择一个城市并显示出其城市名称",
+      "code": "./city-name.js",
+      "scope": [
+        {
+          "name": "citySelect",
+          "packageName": "@kne/react-city-select"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        }
+      ]
+    }
+  ]
+}

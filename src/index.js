@@ -21,7 +21,7 @@ export const RemoteData = ({loader, options, onLoad, children}) => {
         return <Result status="error" title="获取数据发生错误" subTitle={error.message}/>
     }
     if (!data) {
-        return <Spin/>
+        return null
     }
     return children(data)
 };
