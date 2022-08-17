@@ -1,5 +1,5 @@
-import * as component_62 from '@kne/react-city-select';
-import * as component_63 from 'antd/lib/button';
+import * as component_1 from '@kne/react-city-select';
+import * as component_2 from 'antd/lib/button';
 const readmeConfig = {
     name: `@kne/react-city-select`,
     description: `城市选择器`,
@@ -80,7 +80,7 @@ const readmeConfig = {
 <tbody>
 <tr>
 <td>options</td>
-<td>需要覆盖的参数,具体参数残酷下面api部分</td>
+<td>需要覆盖的参数,具体参数参考下面api部分</td>
 <td>object</td>
 <td>-</td>
 </tr>
@@ -178,11 +178,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_62
+    component: component_1
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_63
+    component: component_2
 }]
 },{
     title: `城市多选`,
@@ -218,11 +218,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_62
+    component: component_1
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_63
+    component: component_2
 }]
 },{
     title: `城市名称显示`,
@@ -264,11 +264,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_62
+    component: component_1
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_63
+    component: component_2
 }]
 }]
     }
