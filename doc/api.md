@@ -4,6 +4,8 @@
 | size         | 最大可选数量，注意如果为1的情况交互和其他有些不同 | number | 1     |
 | defaultValue | 初始值                       | array  | []    |
 | onChange     | 城市选择完成回调函数|function| -     |
+| showChinaQuan    |是否显示国内城市的全加省市|boolean|false|
+| showForeignQuan |是否显示国外大洲的全加洲|boolean|false|
 
 #### createCitySelect
 
@@ -34,3 +36,7 @@
 | getCity(id)             |传入城市ID返回城市数据|function|-|
 | getCityByName(name)     |传入城市名返回城市数据|function|-|
 | searchCities(searchStr) |通过关键字搜索城市，支持拼音首字母缩写|function|-|
+
+
+### NationalitySelect
+国籍，参数同createCitySelect

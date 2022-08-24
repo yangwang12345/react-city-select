@@ -45,6 +45,21 @@
           "packageName": "antd/lib/button"
         }
       ]
+    },
+    {
+      "title": "国籍",
+      "description": "展示国家",
+      "code": "./nationality.js",
+      "scope": [
+        {
+          "name": "citySelect",
+          "packageName": "@kne/react-city-select"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        }
+      ]
     }
   ]
 }

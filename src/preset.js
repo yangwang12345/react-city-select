@@ -1,3 +1,5 @@
+import cloneDeep from 'lodash/cloneDeep';
+
 const getSearchList = (() => {
     let searchList;
     return ({city}) => {
@@ -41,20 +43,39 @@ export const apis = {
         return apis.loadData().then(({country}) => {
             return ['1', ...country.relations.continents].map((id) => Object.assign({id}, country.list[id]))
         });
-    }, getList: (pid) => {
+    }, getList: (showChinaQuan,showForeignQuan)=>(pid) => {
         return apis.loadData().then(({city, province, country}) => {
             if (pid === 'gangaotai') {
                 return province.relations['gangaotai'].map((id) => city.list[id]);
             }
             const current = Object.assign({}, city.list[pid]);
-            current.name = '全' + current.name;
             if (province.relations.municipality.indexOf(pid) > -1) {
+                current.name = `${showChinaQuan?"全":""}`+current.name;
+                
                 return [current];
             }
+
             const list = city.relations[pid].map((id) => city.list[id]);
-            if (province.relations.provinces.indexOf(pid) > -1 || country.relations.continents.indexOf(pid) > -1) {
+            if (province.relations.provinces.indexOf(pid) > -1&&showChinaQuan) {
+                current.name = `全`+current.name;
                 list.splice(0, 0, current);
             }
+            if ( country.relations.continents.indexOf(pid) > -1&&showForeignQuan) {
+                current.name = `全`+current.name;
+                list.splice(0, 0, current);
+            }
+            return list;
+        });
+    }, getNationalityList: (pid) => {
+        return apis.loadData().then(({city, province, country}) => {
+            let _city=cloneDeep(city)
+            if(pid==='1'){
+                _city.relations['1'].unshift("410");
+            }
+            if(pid==='350'){
+                _city.relations['350'].unshift("410");
+            }
+            const list = _city.relations[pid].filter(id=>_city.list[id]).map((id) => _city.list[id]);
             return list;
         });
     }, getCity: (id) => {

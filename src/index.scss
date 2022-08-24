@@ -1,0 +1,70 @@
+.city-modal{
+  font-size: 13px;
+  overflow: hidden;
+  .ant-modal-body{
+    padding:0;
+    height: calc(100% - 65px);
+    > .ant-row{
+      height: 100%;
+    }
+  }
+  .ant-modal-content
+  {
+    height: 100%;
+  }
+  .ant-modal-footer{
+    text-align: left;
+  }
+  .ant-menu-vertical{
+    border: none;
+  }
+  .ant-badge-count{
+    background-color: rgba(92, 184, 178, 0.1);
+    color: #5CB8B2;
+    box-shadow: none;
+    border-radius: 50%;
+  }
+  .ant-menu-title-content{
+    font-size: 12px;
+    color: #222222;
+    line-height: 18px;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background: #F3F3F3;
+    font-weight: 500;
+  }
+  .ant-tabs-top > .ant-tabs-nav{
+    margin-bottom: 0;
+  }
+  &-left{
+    flex-shrink: 0;
+    width: 198px;
+    height: 100%;
+    border-right: solid 1px #F1F1F1;
+  }
+  &-right{
+    padding-left: 32px;
+    height: 100%;
+    &-content{
+      padding-top:30px;
+      padding-bottom:30px;
+    }
+    .ant-checkbox-wrapper{
+      margin-bottom: 12px;
+    }
+    .right-first-title{
+      font-size: 14px;
+    }
+  }
+  &-tag{
+    border:none;
+    padding:5px 8px 5px 12px;
+    margin-right: 0;
+  }
+  &-search{
+    font-weight: normal;
+  }
+  &-footer{
+    width: 100%;
+  }
+}

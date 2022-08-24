@@ -134,6 +134,40 @@ render(<BaseExample/>);
 
 ```
 
+- 国籍
+- 展示国家
+- citySelect(@kne/react-city-select),button(antd/lib/button)
+
+```jsx
+const {createNationalitySelect} = citySelect;
+const {default: Button} = button;
+const {useState} = React;
+
+const BaseExample = () => {
+    const [value, setValue] = useState([]);
+    return <div>
+        <div>
+            {JSON.stringify(value, null, 2)}
+        </div>
+        <div>
+            <Button type="primary" onClick={() => {
+                createNationalitySelect({
+                    title:"选择国籍",
+                    defaultValue: value,
+                    onChange: (value) => {
+                        setValue(value);
+                    }
+                });
+            }}>选择国籍</Button>
+        </div>
+
+    </div>;
+};
+
+render(<BaseExample/>);
+
+```
+
 
 ### API
 
@@ -143,6 +177,8 @@ render(<BaseExample/>);
 | size         | 最大可选数量，注意如果为1的情况交互和其他有些不同 | number | 1     |
 | defaultValue | 初始值                       | array  | []    |
 | onChange     | 城市选择完成回调函数|function| -     |
+| showChinaQuan    |是否显示国内城市的全加省市|boolean|false|
+| showForeignQuan |是否显示国外大洲的全加洲|boolean|false|
 
 #### createCitySelect
 
@@ -173,4 +209,8 @@ render(<BaseExample/>);
 | getCity(id)             |传入城市ID返回城市数据|function|-|
 | getCityByName(name)     |传入城市名返回城市数据|function|-|
 | searchCities(searchStr) |通过关键字搜索城市，支持拼音首字母缩写|function|-|
+
+
+### NationalitySelect
+国籍，参数同createCitySelect
 

@@ -1,5 +1,5 @@
-import * as component_1 from '@kne/react-city-select';
-import * as component_2 from 'antd/lib/button';
+import * as component_27 from '@kne/react-city-select';
+import * as component_28 from 'antd/lib/button';
 const readmeConfig = {
     name: `@kne/react-city-select`,
     description: `城市选择器`,
@@ -42,6 +42,18 @@ const readmeConfig = {
 <td>城市选择完成回调函数</td>
 <td>function</td>
 <td>-</td>
+</tr>
+<tr>
+<td>showChinaQuan</td>
+<td>是否显示国内城市的全加省市</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>showForeignQuan</td>
+<td>是否显示国外大洲的全加洲</td>
+<td>boolean</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +152,9 @@ const readmeConfig = {
 <td>-</td>
 </tr>
 </tbody>
-</table>`,
+</table>
+<h3>NationalitySelect</h3>
+<p>国籍，参数同createCitySelect</p>`,
     example: {
         isFull: false,
         className: `react_city_select_e2227`,
@@ -178,11 +192,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_1
+    component: component_27
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_2
+    component: component_28
 }]
 },{
     title: `城市多选`,
@@ -218,11 +232,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_1
+    component: component_27
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_2
+    component: component_28
 }]
 },{
     title: `城市名称显示`,
@@ -264,11 +278,51 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_1
+    component: component_27
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_2
+    component: component_28
+}]
+},{
+    title: `国籍`,
+    description: `展示国家`,
+    code: `const {createNationalitySelect} = citySelect;
+const {default: Button} = button;
+const {useState} = React;
+
+const BaseExample = () => {
+    const [value, setValue] = useState([]);
+    return <div>
+        <div>
+            {JSON.stringify(value, null, 2)}
+        </div>
+        <div>
+            <Button type="primary" onClick={() => {
+                createNationalitySelect({
+                    title:"选择国籍",
+                    defaultValue: value,
+                    onChange: (value) => {
+                        setValue(value);
+                    }
+                });
+            }}>选择国籍</Button>
+        </div>
+
+    </div>;
+};
+
+render(<BaseExample/>);
+
+`,
+    scope: [{
+    name: "citySelect",
+    packageName: "@kne/react-city-select",
+    component: component_27
+},{
+    name: "button",
+    packageName: "antd/lib/button",
+    component: component_28
 }]
 }]
     }

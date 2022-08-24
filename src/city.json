@@ -9,6 +9,20 @@
         "enName": "hot city",
         "name": "热门城市"
       },
+      "410":{
+        "abroadFlag": "0",
+        "areaNumber": "",
+        "category": 1,
+        "code": "410",
+        "enName": "China",
+        "level": "2",
+        "name": "中国",
+        "parentCode": "350",
+        "pinyin": "ZhongGuo",
+        "seoUri": "china",
+        "sort": "410",
+        "spelling": "ZG"
+      },
       "100": {
         "abroadFlag": "0",
         "areaNumber": "620000",
