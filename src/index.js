@@ -173,7 +173,7 @@ const CitySelect = ({title, size, defaultValue, onChange,showChinaQuan,showForei
                             return <DisplayCity key={id} id={id}>{(data) => {
                                 return <Tag className='city-tag' closable={size > 1} onClose={() => {
                                     removeCity(id);
-                                }}>{data.parent ? `${data.parent.name}·${data.city.name}` : data.city.name}</Tag>;
+                                }}>{get(data,'parent') ? `${get(data,'parent.name')}·${get(data,'city.name')}` : get(data,'city.name')}</Tag>;
                             }}</DisplayCity>
                         })}
 					</Space>

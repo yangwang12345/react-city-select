@@ -1,5 +1,5 @@
-import * as component_27 from '@kne/react-city-select';
-import * as component_28 from 'antd/lib/button';
+import * as component_5 from '@kne/react-city-select';
+import * as component_6 from 'antd/lib/button';
 const readmeConfig = {
     name: `@kne/react-city-select`,
     description: `城市选择器`,
@@ -192,11 +192,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_27
+    component: component_5
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_28
+    component: component_6
 }]
 },{
     title: `城市多选`,
@@ -232,11 +232,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_27
+    component: component_5
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_28
+    component: component_6
 }]
 },{
     title: `城市名称显示`,
@@ -278,11 +278,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_27
+    component: component_5
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_28
+    component: component_6
 }]
 },{
     title: `国籍`,
@@ -318,11 +318,11 @@ render(<BaseExample/>);
     scope: [{
     name: "citySelect",
     packageName: "@kne/react-city-select",
-    component: component_27
+    component: component_5
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_28
+    component: component_6
 }]
 }]
     }
