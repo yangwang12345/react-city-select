@@ -75,7 +75,7 @@ const NationalitySelect=({title, size, defaultValue, onChange, close, ...props})
         });
     };
     return <Modal {...props} 
-    height="600px"
+    centered
     onCancel={ close}
 	wrapClassName="city-modal" title={<Row align="middle" justify="space-between">
         <Col>{title}</Col>
@@ -156,13 +156,14 @@ const CitySelect = ({title, size, defaultValue, onChange,showChinaQuan,showForei
         });
     };
     return <Modal {...props} 
+    centered
     onCancel={ close}
 	wrapClassName="city-modal" title={<Row align="middle" justify="space-between">
         <Col>{title}</Col>
         <Col pull={2}><SearchInput onChange={(value) => {
             appendCity(value);
         }}/></Col>
-    </Row>} footer={size>1?
+    </Row>} footer={
 			<Space className='city-modal-footer' direction='vertical' size={12}>
 				<Row align='middle' justify='start'>
 					<Space wrap={true} size={8}>
@@ -178,7 +179,7 @@ const CitySelect = ({title, size, defaultValue, onChange,showChinaQuan,showForei
                         })}
 					</Space>
 				</Row>
-				{size > 1 ? <Row justify='end'>
+				<Row justify='end'>
 					<Space size={8} >
 						<Button onClick={close}>取消</Button>
 						<Button type="primary" onClick={() => {
@@ -186,17 +187,15 @@ const CitySelect = ({title, size, defaultValue, onChange,showChinaQuan,showForei
 						}}>确认</Button>
 
 					</Space>
-				</Row>: null}
-			</Space>:null}>
+				</Row>
+			</Space>}>
         <Row>
             <Col span={6} className='city-modal-left'>
                 <Tabs destroyInactiveTabPane centered>
                     {[{key: 'china', tab: '国内', loader: apis.getChinaCities}, {
                         key: 'foreign', tab: '海外', loader: apis.getCountries
                     }].map((item) => <TabPane tab={item.tab} key={item.key}>
-                        <div style={{
-                            height: '400px', overflowY: 'auto'
-                        }}>
+                        <div >
                             <RemoteData loader={item.loader} onLoad={(data) => {
                                 data && data.length && setSelectedKeys([data[0].id]);
                             }}>{(data) => {

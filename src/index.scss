@@ -3,7 +3,7 @@
   overflow: hidden;
   .ant-modal-body{
     padding:0;
-    height: calc(100% - 65px);
+    height: calc(100vh - 232px);
     > .ant-row{
       height: 100%;
     }
@@ -41,6 +41,7 @@
     width: 198px;
     height: 100%;
     border-right: solid 1px #F1F1F1;
+    overflow-y: auto;
   }
   &-right{
     padding-left: 32px;
